@@ -1,0 +1,208 @@
+/* ─── Reset ─── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #f5f0eb;
+  color: #2c2c2c;
+}
+
+/* ─── Header ─── */
+header {
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(images/shaala.jpg) center / cover no-repeat;
+}
+
+header h1 {
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-style: italic;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* ─── Main / Attractions Grid ─── */
+main {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.attractions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.attraction {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 320px;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.attraction:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  transform: translateY(-4px);
+}
+
+.attraction img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.attraction:hover img {
+  transform: scale(1.05);
+}
+
+.attraction-text {
+  padding: 16px;
+}
+
+.attraction-text h2 {
+  font-size: 19px;
+  margin-bottom: 6px;
+  color: #1a5c3a;
+}
+
+.attraction-text p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* ─── Name Picker Section ─── */
+.name-picker {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 24px;
+  width: 320px;
+}
+
+.name-picker p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.name-picker input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.name-picker button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 6px;
+  margin-bottom: 10px;
+  transition: background 0.2s;
+}
+
+#btn-submit {
+  background-color: #1a5c3a;
+  color: white;
+}
+
+#btn-submit:hover {
+  background-color: #14472e;
+}
+
+#btn-selector {
+  background-color: #c17f3a;
+  color: white;
+}
+
+#btn-selector:hover {
+  background-color: #a56830;
+}
+
+.name-picker ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 6px;
+}
+
+.name-picker ul li {
+  padding: 4px 8px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+#random-name li {
+  font-weight: bold;
+  color: #1a5c3a;
+  font-size: 16px;
+}
+
+/* ─── Footer ─── */
+footer {
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 40px;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(images/shaala.jpg) center / cover no-repeat;
+}
+
+footer p,
+footer a {
+  color: #e8e8e8;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  font-size: 13px;
+}
+
+footer a {
+  color: #a8dcc2;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 600px) {
+  .attraction,
+  .name-picker {
+    width: 90%;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+}
